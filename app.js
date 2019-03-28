@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var locationRoouter = require('./routes/location');
+var locationRouter = require('./routes/location');
 
 
 
@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.use('/location', LocationRouter);
+app.use('/location', locationRouter);
 
 
 
