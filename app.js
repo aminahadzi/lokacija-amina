@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var locationRouter = require('./routes/location');
+var chatRouter = require('./routes/chat');
 
 
 
@@ -22,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/location', locationRouter);
-
+app.use('/chat',chatRouter);
 
 
 // catch 404 and forward to error handler
